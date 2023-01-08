@@ -1,32 +1,24 @@
 import React from 'react';
+import { Link } from 'react-scroll';
+import { links } from '../data';
 
 const Nav = () => {
+  // NAVLINKS
+  const navLinks = links.map(({ link, id }) => {
+    return (
+      <li key={id}>
+        <Link to={link} smooth duration={550}>
+          {link}
+        </Link>
+      </li>
+    );
+  });
+
   return (
     <nav>
       <ul className='nav-links-container'>
-        <li>
-          <a href='/home'>
-            <img src='./Logo.svg' alt='logo' />
-          </a>
-        </li>
-        <li>
-          <a href='/home'>Home</a>
-        </li>
-        <li>
-          <a href='/about'>About</a>
-        </li>
-        <li>
-          <a href='/menu'>Menu</a>
-        </li>
-        <li>
-          <a href='/reservations'>Reservations</a>
-        </li>
-        <li>
-          <a href='/order'>Order Online</a>
-        </li>
-        <li>
-          <a href='/login'>Login</a>
-        </li>
+        <img src='./Logo.svg' alt='logo' />
+        {navLinks}
       </ul>
     </nav>
   );
