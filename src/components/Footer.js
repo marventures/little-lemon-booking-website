@@ -1,11 +1,12 @@
 import React from 'react';
+import restaurant from '../assets/restaurant.jpg';
 
 const Footer = () => {
   return (
     <footer>
-      <nav>
-        <img src='./Logo.svg' alt='logo' />
-        <ul>
+      <nav className='footer-container'>
+        <img src={restaurant} className='footer-photo' alt='logo' />
+        <ul className='grid-item-nav'>
           <p>Little Lemon</p>
           <li>
             <a href='/home'>Home</a>
@@ -27,7 +28,7 @@ const Footer = () => {
           </li>
         </ul>
 
-        <ul>
+        <ul className='grid-item-contact'>
           <p>Contact</p>
           <address>
             You may also want to visit us:
@@ -49,6 +50,25 @@ const Footer = () => {
               <a href='mailto:littlemon@bookings.com'>littlemon@bookings.com</a>
             </li>
           </address>
+        </ul>
+
+        <ul className='grid-item-socials'>
+          <p>Social Media Links</p>
+          <li>
+            <a href='https://facebook.com' target={'_blank'} rel='noreferrer'>
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href='https://instagram.com' target={'_blank'} rel='noreferrer'>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href='https://twitter.com' target={'_blank'} rel='noreferrer'>
+              Twitter
+            </a>
+          </li>
         </ul>
       </nav>
     </footer>

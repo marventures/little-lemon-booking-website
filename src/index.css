@@ -1,13 +1,138 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* CSS RESETS */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove links decoration*/
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+body {
+  padding: 0 20rem;
+}
+
+/* NAV */
+
+.nav-links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* FOOTER */
+
+footer {
+  height: 100vh;
+  width: 100%;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.footer-photo {
+  width: 150px;
+  height: 300px;
+  grid-column: 3 / span 2;
+}
+
+.grid-item-nav {
+  grid-column: 5;
+}
+
+.grid-item-contact {
+  grid-column: 7;
+}
+
+.grid-item-socials {
+  grid-column: 8 / span 4;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 600px) {
+  /* BODY */
+
+  body {
+    padding: 0 2rem;
+  }
+
+  /* NAV */
+
+  /* FOOTER */
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-photo {
+    display: none;
+  }
+
+  .grid-item-nav {
+    grid-column: 1;
+  }
+
+  .grid-item-contact {
+    grid-column: 1;
+  }
+
+  .grid-item-socials {
+    grid-column: 1;
+  }
 }

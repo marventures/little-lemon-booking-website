@@ -3,8 +3,12 @@ import React from 'react';
 const Nav = () => {
   return (
     <nav>
-      <ul>
-        <img src='./Logo.svg' alt='logo' />
+      <ul className='nav-links-container'>
+        <li>
+          <a href='/home'>
+            <img src='./Logo.svg' alt='logo' />
+          </a>
+        </li>
         <li>
           <a href='/home'>Home</a>
         </li>
