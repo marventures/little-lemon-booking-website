@@ -34,16 +34,28 @@ export const socialLinks = [
   {
     id: 1,
     child: <FaFacebook size={30} />,
+<<<<<<< HEAD
     href: 'https://linkedin.com',
+=======
+    href: 'https://linkedin.com/in/mijo-arts',
+>>>>>>> 613aca5540f2bccdd1f0e93fd2b7eefb9193bf04
   },
   {
     id: 2,
     child: <FaInstagram size={30} />,
+<<<<<<< HEAD
     href: 'https://facebook.com/',
+=======
+    href: 'https://facebook.com/MiguelAlonzo711',
+>>>>>>> 613aca5540f2bccdd1f0e93fd2b7eefb9193bf04
   },
   {
     id: 4,
     child: <FaTwitter size={30} />,
+<<<<<<< HEAD
     href: 'https://twitter.com/',
+=======
+    href: 'mailto:malonzo1321@gmail.com',
+>>>>>>> 613aca5540f2bccdd1f0e93fd2b7eefb9193bf04
   },
 ];
