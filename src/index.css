@@ -108,8 +108,8 @@ header {
   transition: 350ms;
 }
 
-/*CALL TO ACTION */
-.call-to-action {
+/*HERO */
+.hero {
   height: 100vh;
   padding-top: 5rem;
 }
