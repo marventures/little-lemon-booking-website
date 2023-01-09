@@ -3,9 +3,6 @@ import { Link as LinkS } from 'react-scroll';
 import { links } from '../data';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import { FaTimes } from 'react-icons/fa';
-import { Link as LinkR } from 'react-router-dom';
-import { Route, Routes } from 'react-router-dom';
-import HomePage from '../pages/HomePage';
 
 const NavBar = () => {
   // STATE FOR HAMBURGER MENU
@@ -80,11 +77,6 @@ const NavBar = () => {
           />
         </div>
       </nav>
-
-      {/* ROUTES */}
-      {/* <Routes>
-        <Route path='/' element={<HomePage />} />
-      </Routes> */}
 
       {/* NAV-ITEMS WHEN HAMBURGER MENU IS ON */}
       {nav && (
