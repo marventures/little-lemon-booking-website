@@ -59,7 +59,6 @@ a:active {
 /* HEADER */
 header {
   position: fixed;
-  top: 0;
   width: 100%;
   background-color: white;
 }
@@ -76,16 +75,37 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-transform: uppercase;
 }
 
 .nav-links {
   padding-left: 1rem;
+  text-transform: uppercase;
 }
 
 /* HAMBURGER */
 .hamburger {
   display: none;
+}
+
+.nav-menu {
+  background-color: #495e57;
+  width: 75vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  transition: 850ms;
+  color: white;
+  border-top-left-radius: 1rem;
+}
+
+.nav-menu.active {
+  right: 0;
+  transition: 350ms;
 }
 
 /* MAIN */

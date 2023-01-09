@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-scroll';
 import { links } from '../data';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
+import { FaTimes } from 'react-icons/fa';
 
 const NavBar = () => {
   // STATE FOR HAMBURGER MENU
@@ -48,6 +49,27 @@ const NavBar = () => {
           />
         </div>
       </nav>
+
+      {/* NAV-ITEMS WHEN HAMBURGER MENU IS ON */}
+      {nav && (
+        <FaTimes
+          size={30}
+          style={{
+            color: 'white',
+            position: 'fixed',
+            top: '38',
+            right: '10',
+            zIndex: '99',
+            cursor: 'pointer',
+          }}
+          onClick={() => setNav(!nav)}
+        />
+      )}
+      <div className='parent'>
+        <ul className={`${nav ? 'nav-menu active' : 'nav-menu'}`}>
+          {navLinks}
+        </ul>
+      </div>
     </header>
   );
 };
