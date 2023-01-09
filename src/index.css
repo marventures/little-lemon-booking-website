@@ -83,7 +83,7 @@ header {
 }
 
 /* HAMBURGER */
-.hamburger {
+.hamburger-on {
   display: none;
 }
 
@@ -155,17 +155,13 @@ footer {
   }
 
   /* HAMBURGER */
-  .hamburger {
+  .hamburger-on {
     display: flex;
     cursor: pointer;
   }
 
   .hamburger-off {
     display: none;
-  }
-
-  .hamburger-on {
-    display: flex;
   }
 
   /* FOOTER */
