@@ -3,6 +3,9 @@ import { Link } from 'react-scroll';
 import { links } from '../data';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import { FaTimes } from 'react-icons/fa';
+import { Link as LinkRR } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import BookingPage from '../pages/BookingPage';
 
 const NavBar = () => {
   // STATE FOR HAMBURGER MENU
@@ -43,19 +46,29 @@ const NavBar = () => {
 
   // NAVLINKS
   const navLinks = links.map(({ link, id }) => {
-    return (
-      <li key={id}>
-        <Link
-          to={link}
-          smooth
-          duration={550}
-          onClick={handleClick}
-          className='nav-links'
-        >
-          {link}
-        </Link>
-      </li>
-    );
+    if (link !== 'reservations') {
+      return (
+        <li key={id}>
+          <Link
+            to={link}
+            smooth
+            duration={550}
+            onClick={handleClick}
+            className='nav-links'
+          >
+            {link}
+          </Link>
+        </li>
+      );
+    } else {
+      return (
+        <li key={id}>
+          <LinkRR to={`/${link}`} onClick={handleClick} className='nav-links'>
+            {link}
+          </LinkRR>
+        </li>
+      );
+    }
   });
 
   return (
@@ -76,6 +89,10 @@ const NavBar = () => {
           />
         </div>
       </nav>
+
+      <Routes>
+        <Route path='/reservations' element={<BookingPage />} />
+      </Routes>
 
       {/* NAV-ITEMS WHEN HAMBURGER MENU IS ON */}
       {nav && (
