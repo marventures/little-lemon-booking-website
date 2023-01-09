@@ -3,7 +3,7 @@ import restaurant from '../assets/restaurant.jpg';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer name='contact'>
       <nav className='footer-container'>
         <img src={restaurant} className='footer-photo' alt='logo' />
         <ul className='grid-item-nav'>

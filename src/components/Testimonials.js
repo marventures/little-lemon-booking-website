@@ -1,5 +1,9 @@
 const Testimonials = () => {
-  return <div>Testimonials</div>;
+  return (
+    <section name='testimonials' className='testimonials'>
+      Testimonials
+    </section>
+  );
 };
 
 export default Testimonials;

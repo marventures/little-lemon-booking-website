@@ -1,5 +1,9 @@
 const CallToAction = () => {
-  return <div>CallToAction</div>;
+  return (
+    <section name='home' className='call-to-action'>
+      CallToAction
+    </section>
+  );
 };
 
 export default CallToAction;

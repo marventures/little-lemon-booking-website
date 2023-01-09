@@ -21,11 +21,11 @@ export const links = [
   },
   {
     id: 5,
-    link: 'order online',
+    link: 'testimonials',
   },
   {
     id: 6,
-    link: 'login',
+    link: 'contact',
   },
 ];
 

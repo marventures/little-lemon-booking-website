@@ -1,5 +1,9 @@
 const BookingPage = () => {
-  return <div>BookingPage</div>;
+  return (
+    <section name='reservations' className='bookings'>
+      BookingPage
+    </section>
+  );
 };
 
 export default BookingPage;

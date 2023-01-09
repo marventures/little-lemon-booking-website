@@ -108,16 +108,40 @@ header {
   transition: 350ms;
 }
 
-/* MAIN */
-main {
+/*CALL TO ACTION */
+.call-to-action {
   height: 100vh;
+  padding-top: 5rem;
+}
+
+/* BOOKING PAGE */
+.bookings {
+  height: 100vh;
+  padding-top: 5rem;
+}
+
+/* SPECIALS */
+.specials {
+  height: 100vh;
+  padding-top: 5rem;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  height: 100vh;
+  padding-top: 5rem;
+}
+
+/* ABOUT */
+.about {
+  height: 100vh;
+  padding-top: 5rem;
 }
 
 /* FOOTER */
-
 footer {
-  height: 100vh;
-  width: 100%;
+  height: max-content;
+  padding: 5rem 0;
 }
 
 .footer-container {
