@@ -1,4 +1,4 @@
-import CallToAction from '../components/CallToAction';
+import Hero from '../components/Hero';
 import Specials from '../components/Specials';
 import Testimonials from '../components/Testimonials';
 import About from '../components/About';
@@ -6,7 +6,7 @@ import About from '../components/About';
 const Main = () => {
   return (
     <main>
-      <CallToAction />
+      <Hero />
       <Specials />
       <Testimonials />
       <About />
