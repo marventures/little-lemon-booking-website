@@ -5,7 +5,7 @@ import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import { FaTimes } from 'react-icons/fa';
 import { Link as LinkR } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
-import Main from './Main';
+import Main from '../pages/Main';
 
 const NavBar = () => {
   // STATE FOR HAMBURGER MENU
