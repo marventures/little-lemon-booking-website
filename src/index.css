@@ -31,13 +31,6 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -63,17 +56,41 @@ a:active {
   text-decoration: none;
 }
 
-body {
-  padding: 0 20rem;
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
 }
 
 /* NAV */
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem 0;
+}
 
 .nav-links-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
+}
+
+.nav-links {
+  padding-left: 1rem;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+}
+
+/* MAIN */
+main {
+  height: 100vh;
 }
 
 /* FOOTER */
@@ -107,14 +124,21 @@ footer {
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 600px) {
-  /* BODY */
-
-  body {
-    padding: 0 2rem;
+@media (max-width: 768px) {
+  /* NAV */
+  .nav-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .nav-links-container {
+    display: none;
   }
 
-  /* NAV */
+  /* HAMBURGER */
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
 
   /* FOOTER */
   .footer-container {
