@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link as LinkS } from 'react-scroll';
 import { links } from '../data';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import { FaTimes } from 'react-icons/fa';
-import { Link as LinkRR } from 'react-router-dom';
+import { Link as LinkR } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
-import BookingPage from '../pages/BookingPage';
+import Main from './Main';
 
 const NavBar = () => {
   // STATE FOR HAMBURGER MENU
@@ -46,35 +46,27 @@ const NavBar = () => {
 
   // NAVLINKS
   const navLinks = links.map(({ link, id }) => {
-    if (link !== 'reservations') {
-      return (
-        <li key={id}>
-          <Link
-            to={link}
-            smooth
-            duration={550}
-            onClick={handleClick}
-            className='nav-links'
-          >
-            {link}
-          </Link>
-        </li>
-      );
-    } else {
-      return (
-        <li key={id}>
-          <LinkRR to={`/${link}`} onClick={handleClick} className='nav-links'>
-            {link}
-          </LinkRR>
-        </li>
-      );
-    }
+    return (
+      <li key={id}>
+        <LinkS
+          to={link}
+          smooth
+          duration={550}
+          onClick={handleClick}
+          className='nav-links'
+        >
+          {link}
+        </LinkS>
+      </li>
+    );
   });
 
   return (
     <header>
       <nav ref={navRef} className='nav-container'>
-        <img src='./Logo.svg' alt='logo' />
+        <LinkR to='/'>
+          <img src='./Logo.svg' alt='logo' />
+        </LinkR>
         <ul className='nav-links-container'>{navLinks}</ul>
         {/* HAMBURGER MENU */}
         <div onClick={() => setNav(!nav)}>
@@ -90,8 +82,9 @@ const NavBar = () => {
         </div>
       </nav>
 
+      {/* ROUTES */}
       <Routes>
-        <Route path='/reservations' element={<BookingPage />} />
+        <Route path='/' element={<Main />} />
       </Routes>
 
       {/* NAV-ITEMS WHEN HAMBURGER MENU IS ON */}

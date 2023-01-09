@@ -5,26 +5,18 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 export const links = [
   {
     id: 1,
-    link: 'home',
-  },
-  {
-    id: 2,
     link: 'about',
   },
   {
-    id: 3,
+    id: 2,
     link: 'menu',
   },
   {
-    id: 4,
-    link: 'reservations',
-  },
-  {
-    id: 5,
+    id: 3,
     link: 'testimonials',
   },
   {
-    id: 6,
+    id: 4,
     link: 'contact',
   },
 ];
