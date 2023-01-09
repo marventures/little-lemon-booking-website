@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { links } from '../data';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
@@ -14,6 +14,32 @@ const NavBar = () => {
       return setNav(!nav);
     }
   };
+
+  // REF
+  const navRef = useRef(null);
+
+  // NAVBAR HIDE/ SHOW ON SCROLL
+  useEffect(() => {
+    let previousScrollPosition = window.scrollY;
+    const handleScroll = () => {
+      const currentScrollPosition = window.scrollY;
+      const navElement = navRef.current;
+
+      if (!navElement) return;
+      if (previousScrollPosition > currentScrollPosition) {
+        navElement.style.transform = 'translateY(0)';
+        navElement.style.transition = '350ms';
+      } else {
+        navElement.style.transform = 'translateY(-110px)';
+        navElement.style.transition = '800ms';
+      }
+      previousScrollPosition = currentScrollPosition;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // NAVLINKS
   const navLinks = links.map(({ link, id }) => {
@@ -34,11 +60,11 @@ const NavBar = () => {
 
   return (
     <header>
-      <nav className='nav-container'>
+      <nav ref={navRef} className='nav-container'>
         <img src='./Logo.svg' alt='logo' />
         <ul className='nav-links-container'>{navLinks}</ul>
         {/* HAMBURGER MENU */}
-        <div onClick={() => setNav(!nav)} className='hamburger'>
+        <div onClick={() => setNav(!nav)}>
           <HiOutlineMenuAlt1
             size={30}
             style={{
@@ -46,6 +72,7 @@ const NavBar = () => {
               top: '38',
               right: '10',
             }}
+            className={`${nav ? 'hamburger-off' : 'hamburger-on'}`}
           />
         </div>
       </nav>

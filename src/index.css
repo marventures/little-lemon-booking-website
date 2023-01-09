@@ -160,6 +160,14 @@ footer {
     cursor: pointer;
   }
 
+  .hamburger-off {
+    display: none;
+  }
+
+  .hamburger-on {
+    display: flex;
+  }
+
   /* FOOTER */
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
