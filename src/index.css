@@ -56,12 +56,6 @@ a:active {
   text-decoration: none;
 }
 
-/*HERO */
-.hero {
-  height: 100vh;
-  padding-top: 5rem;
-}
-
 /* BOOKING PAGE */
 .bookings {
   height: 100vh;
