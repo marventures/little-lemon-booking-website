@@ -1,8 +1,10 @@
+import Bookings from '../components/Bookings/Bookings';
+
 const BookingPage = () => {
   return (
-    <section name='reservations' className='bookings'>
-      BookingPage
-    </section>
+    <>
+      <Bookings />
+    </>
   );
 };
 
