@@ -7,14 +7,14 @@ import Testimonials from '../components/Testimonials/Testimonials';
 
 const HomePage = () => {
   return (
-    <main>
+    <>
       <NavBar />
       <Hero />
       <Specials />
       <Testimonials />
       <About />
       <Footer />
-    </main>
+    </>
   );
 };
 
