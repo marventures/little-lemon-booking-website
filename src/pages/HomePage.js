@@ -1,18 +1,12 @@
-import About from '../components/About/About';
-import Footer from '../components/Footer/Footer';
-import Hero from '../components/Hero/Hero';
 import NavBar from '../components/NavBar/NavBar';
-import Specials from '../components/Specials/Specials';
-import Testimonials from '../components/Testimonials/Testimonials';
+import Main from '../components/Main/Main';
+import Footer from '../components/Footer/Footer';
 
 const HomePage = () => {
   return (
     <>
       <NavBar />
-      <Hero />
-      <Specials />
-      <Testimonials />
-      <About />
+      <Main />
       <Footer />
     </>
   );
