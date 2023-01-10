@@ -60,33 +60,35 @@ const NavBar = () => {
   });
 
   return (
-    <header>
-      <nav ref={navRef} className='nav-container'>
-        <LinkS to='hero' smooth duration={550} onClick={handleClick}>
-          <img src='./Logo.svg' alt='logo' />
-        </LinkS>
+    <>
+      <header ref={navRef}>
+        <nav className='nav-container'>
+          <LinkS to='hero' smooth duration={550} onClick={handleClick}>
+            <img src='./Logo.svg' alt='logo' />
+          </LinkS>
 
-        <ul className='nav-links-container'>{navLinks}</ul>
-        {/* HAMBURGER MENU */}
-        <div onClick={() => setNav(!nav)}>
-          <HiOutlineMenuAlt1
-            size={30}
-            style={{
-              position: 'fixed',
-              top: '38',
-              right: '10',
-            }}
-            className={`${nav ? 'hamburger-off' : 'hamburger-on'}`}
-          />
-        </div>
-      </nav>
+          <ul className='nav-links-container'>{navLinks}</ul>
+          {/* HAMBURGER MENU */}
+          <div onClick={() => setNav(!nav)}>
+            <HiOutlineMenuAlt1
+              size={30}
+              style={{
+                position: 'fixed',
+                top: '38',
+                right: '10',
+              }}
+              className={`${nav ? 'hamburger-off' : 'hamburger-on'}`}
+            />
+          </div>
+        </nav>
+      </header>
 
       {/* NAV-ITEMS WHEN HAMBURGER MENU IS ON */}
       {nav && (
         <FaTimes
           size={30}
           style={{
-            color: 'white',
+            color: '#333',
             position: 'fixed',
             top: '38',
             right: '10',
@@ -97,7 +99,7 @@ const NavBar = () => {
         />
       )}
       <ul className={`${nav ? 'nav-menu active' : 'nav-menu'}`}>{navLinks}</ul>
-    </header>
+    </>
   );
 };
 
