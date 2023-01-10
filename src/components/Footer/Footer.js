@@ -1,5 +1,5 @@
 import React from 'react';
-import restaurant from '../assets/restaurant.jpg';
+import restaurant from '../../assets/restaurant.jpg';
 
 const Footer = () => {
   return (

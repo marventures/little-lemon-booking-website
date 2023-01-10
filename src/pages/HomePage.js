@@ -1,9 +1,9 @@
-import Hero from '../components/Hero';
-import Specials from '../components/Specials';
-import Testimonials from '../components/Testimonials';
-import About from '../components/About';
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
+import About from '../components/About/About';
+import Footer from '../components/Footer/Footer';
+import Hero from '../components/Hero/Hero';
+import NavBar from '../components/NavBar/NavBar';
+import Specials from '../components/Specials/Specials';
+import Testimonials from '../components/Testimonials/Testimonials';
 
 const HomePage = () => {
   return (

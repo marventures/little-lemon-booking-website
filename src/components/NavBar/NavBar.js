@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link as LinkS } from 'react-scroll';
-import { links } from '../data';
+import { links } from '../../data';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import { FaTimes } from 'react-icons/fa';
 
