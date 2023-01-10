@@ -49,3 +49,25 @@ header {
   right: 0;
   transition: 350ms;
 }
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .nav-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .nav-links-container {
+    display: none;
+  }
+
+  /* HAMBURGER */
+  .hamburger-on {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .hamburger-off {
+    display: none;
+  }
+}

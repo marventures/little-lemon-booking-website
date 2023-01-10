@@ -117,25 +117,6 @@ footer {
 
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
-  /* NAV */
-  .nav-container {
-    display: flex;
-    justify-content: flex-start;
-  }
-  .nav-links-container {
-    display: none;
-  }
-
-  /* HAMBURGER */
-  .hamburger-on {
-    display: flex;
-    cursor: pointer;
-  }
-
-  .hamburger-off {
-    display: none;
-  }
-
   /* FOOTER */
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
