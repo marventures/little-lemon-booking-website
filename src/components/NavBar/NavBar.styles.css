@@ -17,6 +17,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
 }
 
 .nav-links {
@@ -43,6 +45,8 @@ header {
   transition: 850ms;
   color: white;
   border-top-left-radius: 1rem;
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
 }
 
 .nav-menu.active {

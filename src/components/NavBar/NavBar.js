@@ -96,11 +96,7 @@ const NavBar = () => {
           onClick={() => setNav(!nav)}
         />
       )}
-      <div className='parent'>
-        <ul className={`${nav ? 'nav-menu active' : 'nav-menu'}`}>
-          {navLinks}
-        </ul>
-      </div>
+      <ul className={`${nav ? 'nav-menu active' : 'nav-menu'}`}>{navLinks}</ul>
     </header>
   );
 };
