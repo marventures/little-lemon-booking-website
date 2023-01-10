@@ -1,5 +1,6 @@
 import React from 'react';
 import restaurant from '../../assets/restaurant.jpg';
+import './Footer.styles.css';
 
 const Footer = () => {
   return (
