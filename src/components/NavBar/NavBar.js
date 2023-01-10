@@ -62,7 +62,9 @@ const NavBar = () => {
   return (
     <header>
       <nav ref={navRef} className='nav-container'>
-        <img src='./Logo.svg' alt='logo' />
+        <LinkS to='hero' smooth duration={550} onClick={handleClick}>
+          <img src='./Logo.svg' alt='logo' />
+        </LinkS>
 
         <ul className='nav-links-container'>{navLinks}</ul>
         {/* HAMBURGER MENU */}
