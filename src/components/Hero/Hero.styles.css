@@ -78,9 +78,8 @@
 
 @media (min-width: 1440px) {
   .hero {
-    padding: 8rem 20rem 0;
+    padding: 8rem 20rem;
     text-align: left;
-    align-items: flex-start;
   }
 
   .display-container {
