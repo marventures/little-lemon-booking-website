@@ -1,5 +1,52 @@
 /* SPECIALS */
 .specials {
   height: 100vh;
-  padding-top: 5rem;
+  padding: 2rem 2rem;
+}
+
+.specials-header {
+  display: grid;
+  place-items: center;
+}
+
+.specials-title {
+  font-weight: 500;
+  font-size: 38px;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.menu-button {
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  background-color: #f4ce14;
+  color: #333;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  width: 200px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .specials {
+    padding: 2rem 3rem;
+  }
+
+  .specials-title {
+    font-size: 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .specials-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1440px) {
+  .specials {
+    padding: 8rem 20rem 0;
+  }
 }
