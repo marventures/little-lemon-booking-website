@@ -15,6 +15,10 @@ footer {
   grid-column: 3 / span 2;
 }
 
+.footer-links {
+  text-transform: capitalize;
+}
+
 .grid-item-nav {
   grid-column: 5;
 }

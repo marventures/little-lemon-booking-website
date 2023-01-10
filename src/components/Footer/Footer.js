@@ -1,32 +1,49 @@
 import React from 'react';
 import restaurant from '../../assets/restaurant.jpg';
 import './Footer.styles.css';
+import { links, contacts, socials } from '../../data';
+import { Link as LinkS } from 'react-scroll';
 
 const Footer = () => {
+  // NAVLINKS
+  const navLinks = links.map(({ link, id }) => {
+    return (
+      <li key={id}>
+        <LinkS to={link} smooth duration={550} className='footer-links'>
+          {link}
+        </LinkS>
+      </li>
+    );
+  });
+
+  //CONTACTS
+  const contactLinks = contacts.map(({ link, id, title }) => {
+    return (
+      <li key={id}>
+        <a href={link}>{title}</a>
+      </li>
+    );
+  });
+
+  // SOCIAL LINKS
+
+  const socialLinks = socials.map(({ id, child, link }) => {
+    return (
+      <li key={id}>
+        <a href={link} target={'_blank'} rel='noreferrer'>
+          {child}
+        </a>
+      </li>
+    );
+  });
+
   return (
     <footer name='contact'>
       <nav className='footer-container'>
         <img src={restaurant} className='footer-photo' alt='logo' />
         <ul className='grid-item-nav'>
           <p>Little Lemon</p>
-          <li>
-            <a href='/home'>Home</a>
-          </li>
-          <li>
-            <a href='/about'>About</a>
-          </li>
-          <li>
-            <a href='/menu'>Menu</a>
-          </li>
-          <li>
-            <a href='/reservations'>Reservations</a>
-          </li>
-          <li>
-            <a href='/order'>Order Online</a>
-          </li>
-          <li>
-            <a href='/login'>Login</a>
-          </li>
+          {navLinks}
         </ul>
 
         <ul className='grid-item-contact'>
@@ -41,35 +58,13 @@ const Footer = () => {
             LaSalle Street Chicago, Illinois 60602
             <br />
             USA
-            <li>
-              <a href='mailto:jim@rock.com'>jim@rock.com</a>
-            </li>
-            <li>
-              <a href='tel:+13115552368'>(311) 555-2368</a>
-            </li>
-            <li>
-              <a href='mailto:littlemon@bookings.com'>littlemon@bookings.com</a>
-            </li>
+            {contactLinks}
           </address>
         </ul>
 
         <ul className='grid-item-socials'>
-          <p>Social Media Links</p>
-          <li>
-            <a href='https://facebook.com' target={'_blank'} rel='noreferrer'>
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a href='https://instagram.com' target={'_blank'} rel='noreferrer'>
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a href='https://twitter.com' target={'_blank'} rel='noreferrer'>
-              Twitter
-            </a>
-          </li>
+          <p>Social Media</p>
+          {socialLinks}
         </ul>
       </nav>
     </footer>
