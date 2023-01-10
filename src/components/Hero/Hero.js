@@ -16,7 +16,7 @@ const Hero = () => {
           Reserve a Table
         </LinkR>
       </div>
-      <div>
+      <div className='image-container'>
         <img
           src={restaurantFood}
           alt='restaurant food'
