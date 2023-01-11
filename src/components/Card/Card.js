@@ -8,7 +8,9 @@ const Card = () => {
     ({ id, image, name, price, description }) => {
       return (
         <div key={id} className='card-container'>
-          <img src={image} alt={name} className='specials-image' />
+          <div className='specials-image-container'>
+            <img src={image} alt={name} className='specials-image' />
+          </div>
           <div className='specials-details'>
             <div className='specials-name'>
               <p>{name}</p>
@@ -24,7 +26,7 @@ const Card = () => {
       );
     }
   );
-  return <>{specialties}</>;
+  return <div className='card-list'>{specialties}</div>;
 };
 
 export default Card;

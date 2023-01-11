@@ -1,7 +1,7 @@
 /* SPECIALS */
 .specials {
-  height: 100vh;
-  padding: 2rem 2rem;
+  height: 100%;
+  padding: 8rem 2rem;
 }
 
 .specials-header {
@@ -29,7 +29,7 @@
 
 @media (min-width: 768px) {
   .specials {
-    padding: 2rem 3rem;
+    padding: 4rem 4rem;
   }
 
   .specials-title {
@@ -38,6 +38,11 @@
 }
 
 @media (min-width: 1024px) {
+  .specials {
+    height: 100vh;
+    padding: 6rem 6rem;
+  }
+
   .specials-header {
     display: flex;
     align-items: center;
@@ -47,6 +52,6 @@
 
 @media (min-width: 1440px) {
   .specials {
-    padding: 8rem 20rem 0;
+    padding: 6rem 16rem;
   }
 }
