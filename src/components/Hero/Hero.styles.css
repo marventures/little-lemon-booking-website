@@ -4,7 +4,7 @@
   padding: 8rem 2rem;
   background-color: #495e57;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   font-family: 'Markazi Text', serif;
   color: #edefee;
   text-align: center;
