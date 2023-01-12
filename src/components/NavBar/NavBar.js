@@ -64,7 +64,7 @@ const NavBar = () => {
       <header ref={navRef}>
         <nav className='nav-container'>
           <LinkS to='hero' smooth duration={550} onClick={handleClick}>
-            <img src='./Logo.svg' alt='logo' />
+            <img src='./Logo.svg' alt='logo' className='logo' />
           </LinkS>
 
           <ul className='nav-links-container'>{navLinks}</ul>
@@ -74,7 +74,7 @@ const NavBar = () => {
               size={30}
               style={{
                 position: 'fixed',
-                top: '38',
+                top: '25',
                 right: '10',
               }}
               className={`${nav ? 'hamburger-off' : 'hamburger-on'}`}
@@ -88,7 +88,7 @@ const NavBar = () => {
         <FaTimes
           size={30}
           style={{
-            color: '#333',
+            color: '#edefee',
             position: 'fixed',
             top: '38',
             right: '10',

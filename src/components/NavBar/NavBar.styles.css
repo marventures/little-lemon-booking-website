@@ -13,17 +13,27 @@ header {
   padding: 1rem;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 .nav-links-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: 'Karla', sans-serif;
   font-weight: 800;
+  color: #333;
 }
 
 .nav-links {
-  padding-left: 1rem;
+  padding-left: 2rem;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav-links:hover {
+  color: #ee9972;
 }
 
 /* HAMBURGER */
@@ -32,7 +42,8 @@ header {
 }
 
 .nav-menu {
-  background-color: #f4ce14;
+  background-color: #333333;
+  color: #edefee;
   width: 75vw;
   height: 100vh;
   display: flex;
@@ -43,7 +54,6 @@ header {
   top: 0;
   right: -100%;
   transition: 850ms;
-  color: #333;
   border-top-left-radius: 1rem;
   font-family: 'Karla', sans-serif;
   font-weight: 800;
