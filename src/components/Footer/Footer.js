@@ -20,7 +20,9 @@ const Footer = () => {
   const contactLinks = contacts.map(({ link, id, title }) => {
     return (
       <li key={id}>
-        <a href={link}>{title}</a>
+        <a href={link} className='contact-links'>
+          {title}
+        </a>
       </li>
     );
   });
@@ -30,7 +32,12 @@ const Footer = () => {
   const socialLinks = socials.map(({ id, child, link }) => {
     return (
       <li key={id}>
-        <a href={link} target={'_blank'} rel='noreferrer'>
+        <a
+          href={link}
+          target={'_blank'}
+          rel='noreferrer'
+          className='social-links'
+        >
           {child}
         </a>
       </li>
@@ -42,12 +49,12 @@ const Footer = () => {
       <nav className='footer-container'>
         <img src={restaurant} className='footer-photo' alt='logo' />
         <ul className='grid-item-nav'>
-          <p>Little Lemon</p>
+          <p className='footer-title'>Little Lemon</p>
           {navLinks}
         </ul>
 
         <ul className='grid-item-contact'>
-          <p>Contact</p>
+          <p className='footer-title'>Contact</p>
           <address>
             You may also want to visit us:
             <br />
@@ -58,12 +65,14 @@ const Footer = () => {
             LaSalle Street Chicago, Illinois 60602
             <br />
             USA
-            {contactLinks}
+            <br />
+            <br />
+            <div className='contacts'>{contactLinks}</div>
           </address>
         </ul>
 
         <ul className='grid-item-socials'>
-          <p>Social Media</p>
+          <p className='footer-title'>Social Media</p>
           {socialLinks}
         </ul>
       </nav>
