@@ -1,16 +1,16 @@
-import Hero from '../Hero/Hero';
-import Specials from '../Specials/Specials';
-import Testimonials from '../Testimonials/Testimonials';
-import About from '../About/About';
+import HomePage from '../../pages/HomePage';
+import BookingPage from '../../pages/BookingPage';
+import { Routes, Route } from 'react-router-dom';
 
 const Main = () => {
   return (
-    <main>
-      <Hero />
-      <Specials />
-      <Testimonials />
-      <About />
-    </main>
+    <>
+      {/* ROUTES */}
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/bookings' element={<BookingPage />} />
+      </Routes>
+    </>
   );
 };
 
