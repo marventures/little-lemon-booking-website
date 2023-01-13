@@ -1,31 +1,32 @@
 import { useState } from 'react';
 import './BookingForm.styles.css';
 
-const BookingForm = ({ availableTimes, setAvailableTimes }) => {
+const BookingForm = () => {
+  const [date, setDate] = useState('');
+  const [time, setTime] = useState('17:00');
   const [guests, setGuests] = useState('');
-  const [occasions, setOccasions] = useState('Birthday');
+  const [occasion, setOccasion] = useState('Birthday');
+  const [availableTimes, setAvailableTimes] = useState([
+    '17:00',
+    '18:00',
+    '19:00',
+    '20:00',
+    '21:00',
+    '22:00',
+  ]);
 
   // SUBMIT HANDLER
   const handleSubmit = e => {
     e.preventDefault();
 
     console.log(`
-    Date: ${availableTimes.date},
-    Time: ${availableTimes.time},
+    Date: ${date},
+    Time: ${time},
     Number of Guests: ${guests},
-    Occasion: ${occasions}`);
+    Occasion: ${occasion}`);
 
-    setAvailableTimes({
-      date: '',
-      time: '17:00',
-    });
     setGuests('');
-    setOccasions('Birthday');
-  };
-
-  // ONCHANGE HANDLER FOR DATE AND TIME
-  const handleChange = e => {
-    setAvailableTimes({ ...availableTimes, [e.target.name]: e.target.value });
+    setOccasion('Birthday');
   };
 
   return (
@@ -36,25 +37,20 @@ const BookingForm = ({ availableTimes, setAvailableTimes }) => {
         <input
           type='date'
           id='res-date'
-          name='date'
-          value={availableTimes.date}
-          onChange={handleChange}
+          value={date}
+          onChange={e => setDate(e.target.value)}
         />
 
         {/* TIME */}
         <label htmlFor='res-time'>Choose time</label>
         <select
           id='res-time'
-          name='time'
-          value={availableTimes.time}
-          onChange={handleChange}
+          value={time}
+          onChange={e => setTime(e.target.value)}
         >
-          <option>17:00</option>
-          <option>18:00</option>
-          <option>19:00</option>
-          <option>20:00</option>
-          <option>21:00</option>
-          <option>22:00</option>
+          {availableTimes.map(time => (
+            <option key={time}>{time}</option>
+          ))}
         </select>
 
         {/* NUMBER OF GUESTS */}
@@ -73,8 +69,8 @@ const BookingForm = ({ availableTimes, setAvailableTimes }) => {
         <label htmlFor='occasion'>Occasion</label>
         <select
           id='occasion'
-          value={occasions}
-          onChange={e => setOccasions(e.target.value)}
+          value={occasion}
+          onChange={e => setOccasion(e.target.value)}
         >
           <option>Birthday</option>
           <option>Engagement</option>
@@ -82,7 +78,7 @@ const BookingForm = ({ availableTimes, setAvailableTimes }) => {
           <option>Wedding</option>
         </select>
 
-        {/* SUBMIT INPUT */}
+        {/* SUBMIT */}
         <input type='submit' value='Make Your reservation' />
       </form>
     </section>
