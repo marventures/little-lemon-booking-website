@@ -1,16 +1,7 @@
 import { useState } from 'react';
 import './BookingForm.styles.css';
 
-const BookingForm = () => {
-  const [availableTimes, setAvailableTimes] = useState([
-    '17:00',
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00',
-  ]);
-
+const BookingForm = ({ availableTimes, dispatch }) => {
   const [bookings, setBookings] = useState({
     date: '',
     time: '17:00',
@@ -40,7 +31,7 @@ const BookingForm = () => {
   const handleChange = e => {
     const { name, value } = e.target;
 
-    // [e.target.name] = e.target.date || e.target.time, etc
+    // [e.target.name] = e.target.time || e.target.guests || e.target.occasion
     setBookings({ ...bookings, [name]: value });
   };
 
@@ -54,7 +45,10 @@ const BookingForm = () => {
           name='date'
           id='res-date'
           value={bookings.date}
-          onChange={handleChange}
+          onChange={e => {
+            setBookings(prevState => ({ ...prevState, date: e.target.value }));
+            dispatch({ type: 'UPDATE_TIMES', date: e.target.value });
+          }}
         />
 
         {/* TIME */}
@@ -65,7 +59,7 @@ const BookingForm = () => {
           value={bookings.time}
           onChange={handleChange}
         >
-          {availableTimes.map(time => (
+          {availableTimes.times.map(time => (
             <option key={time}>{time}</option>
           ))}
         </select>
