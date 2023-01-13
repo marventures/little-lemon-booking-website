@@ -1,4 +1,4 @@
-import './Bookings.styles.css';
+import './BookingForm.styles.css';
 
 const BookingForm = () => {
   return (
