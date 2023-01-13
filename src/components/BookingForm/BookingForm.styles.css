@@ -1,5 +1,9 @@
-/* BOOKINGS */
-.bookings {
+.booking-form {
   height: 100vh;
-  padding-top: 5rem;
+}
+
+.form-container {
+  display: grid;
+  max-width: 200px;
+  gap: 20px;
 }
