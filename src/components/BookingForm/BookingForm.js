@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './BookingForm.styles.css';
 
 const BookingForm = ({ availableTimes, dispatch }) => {
+  const { times } = availableTimes;
+
   const [bookings, setBookings] = useState({
     date: '',
     time: '17:00',
@@ -59,7 +61,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
           value={bookings.time}
           onChange={handleChange}
         >
-          {availableTimes.times.map(time => (
+          {times.map(time => (
             <option key={time}>{time}</option>
           ))}
         </select>
