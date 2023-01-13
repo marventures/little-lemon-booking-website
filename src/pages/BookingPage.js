@@ -1,9 +1,9 @@
-import Bookings from '../components/Bookings/Bookings';
+import BookingForm from '../components/BookingForm/BookingForm';
 
 const BookingPage = () => {
   return (
     <>
-      <Bookings />
+      <BookingForm />
     </>
   );
 };

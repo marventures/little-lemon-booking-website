@@ -1,6 +1,6 @@
 import './Bookings.styles.css';
 
-const Bookings = () => {
+const BookingForm = () => {
   return (
     <section name='reservations' className='bookings'>
       Bookings
@@ -8,4 +8,4 @@ const Bookings = () => {
   );
 };
 
-export default Bookings;
+export default BookingForm;
