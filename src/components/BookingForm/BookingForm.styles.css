@@ -1,9 +1,113 @@
 .booking-form {
   height: 100vh;
+  background-color: #495e57;
+  padding: 2rem;
+  font-family: 'Karla', sans-serif;
+  color: #edefee;
+}
+
+.bookings-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-container {
-  display: grid;
-  max-width: 200px;
-  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.booking-home {
+  width: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 1rem;
+}
+
+.booking-home:hover {
+  transform: scale(1.05);
+  transition-duration: 200ms;
+}
+
+.booking-header {
+  color: #f4ce14;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.booking-subheader {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.booking-title {
+  margin: 2rem 0;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+input,
+select {
+  width: 300px;
+  height: 50px;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem;
+}
+
+label {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.booking-button {
+  width: 250px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-weight: 800;
+  background-color: #f4ce14;
+  border: none;
+  border-radius: 1rem;
+}
+
+.booking-button:hover {
+  transform: scale(0.95);
+  transition-duration: 200ms;
+  background-color: hsla(50, 91%, 52%, 0.925);
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .booking-home {
+    width: 75px;
+  }
+
+  .booking-header {
+    font-size: 64px;
+  }
+
+  .booking-subheader {
+    font-size: 36px;
+  }
+
+  .booking-title {
+    margin: 3rem 0;
+    font-size: 36px;
+  }
+
+  input,
+  select {
+    width: 400px;
+  }
+
+  label {
+    font-size: 24px;
+  }
 }
