@@ -3,6 +3,7 @@ import './BookingForm.styles.css';
 import { submitAPI } from '../../utils/temp';
 import { useNavigate } from 'react-router-dom';
 
+// TODO: FORM VALIDATION
 const BookingForm = ({ availableTimes, dispatch }) => {
   const navigate = useNavigate();
   const { times } = availableTimes;
@@ -13,7 +14,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
     occasion: 'Birthday',
   });
 
-  const [isFormEmpty, setIsFormEmpty] = useState(false);
+  const [isFormEmpty, setIsFormEmpty] = useState(true);
 
   useEffect(() => {
     localStorage.setItem('Bookings', JSON.stringify(bookings));
@@ -25,7 +26,8 @@ const BookingForm = ({ availableTimes, dispatch }) => {
 
     // SUBMIT LOGIC
     if ((bookings.date, bookings.time, bookings.guests !== '')) {
-      submitAPI(!isFormEmpty);
+      submitAPI();
+      setIsFormEmpty(false);
       navigate('/confirmed');
 
       console.log(`
@@ -42,7 +44,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
         occasion: 'Birthday',
       });
     } else {
-      setIsFormEmpty(isFormEmpty);
+      setIsFormEmpty(true);
       console.log('THERE IS AN ERROR SUBMITTING YOUR FORM');
     }
   };
@@ -70,6 +72,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
             // new Date (e.target.value),  date argument on fetchAPI function can access .getDate() and set availableTimes different based on a given Date
             dispatch({ type: 'UPDATE_TIMES', date: new Date(e.target.value) });
           }}
+          required={true}
         />
 
         {/* TIME */}
@@ -79,6 +82,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
           name='time'
           value={bookings.time}
           onChange={handleChange}
+          required={true}
         >
           {times.map(time => (
             <option key={time}>{time}</option>
@@ -96,6 +100,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
           name='guests'
           value={bookings.guests}
           onChange={handleChange}
+          required={true}
         />
 
         {/* TYPE OF OCCASION */}
@@ -105,6 +110,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
           value={bookings.occasion}
           name='occasion'
           onChange={handleChange}
+          required={true}
         >
           <option>Birthday</option>
           <option>Engagement</option>
@@ -113,7 +119,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
         </select>
 
         {/* SUBMIT */}
-        <input type='submit' value='Make Your reservation' />
+        <button type='submit'>Make Your reservation</button>
       </form>
     </section>
   );
