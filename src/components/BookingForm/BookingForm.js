@@ -3,7 +3,6 @@ import './BookingForm.styles.css';
 import { submitAPI } from '../../utils/temp';
 import { useNavigate } from 'react-router-dom';
 
-// TODO: FORM VALIDATION
 const BookingForm = ({ availableTimes, dispatch }) => {
   const navigate = useNavigate();
   const { times } = availableTimes;
@@ -13,8 +12,6 @@ const BookingForm = ({ availableTimes, dispatch }) => {
     guests: '',
     occasion: 'Birthday',
   });
-
-  const [isFormEmpty, setIsFormEmpty] = useState(true);
 
   useEffect(() => {
     localStorage.setItem('Bookings', JSON.stringify(bookings));
@@ -27,7 +24,6 @@ const BookingForm = ({ availableTimes, dispatch }) => {
     // SUBMIT LOGIC
     if ((bookings.date, bookings.time, bookings.guests !== '')) {
       submitAPI();
-      setIsFormEmpty(false);
       navigate('/confirmed');
 
       console.log(`
@@ -44,7 +40,6 @@ const BookingForm = ({ availableTimes, dispatch }) => {
         occasion: 'Birthday',
       });
     } else {
-      setIsFormEmpty(true);
       console.log('THERE IS AN ERROR SUBMITTING YOUR FORM');
     }
   };
