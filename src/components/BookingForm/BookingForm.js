@@ -12,14 +12,11 @@ const BookingForm = ({ availableTimes, dispatch }) => {
     guests: '',
     occasion: 'Birthday',
   });
+
   const [isFormEmpty, setIsFormEmpty] = useState(false);
 
   useEffect(() => {
-    const { date, time, guests, occasion } = bookings;
-    localStorage.setItem('DATE', date);
-    localStorage.setItem('TIME', time);
-    localStorage.setItem('GUESTS', guests);
-    localStorage.setItem('OCCASION', occasion);
+    localStorage.setItem('Bookings', JSON.stringify(bookings));
   }, [bookings]);
 
   // SUBMIT HANDLER
