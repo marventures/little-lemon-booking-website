@@ -3,9 +3,8 @@ import './BookingForm.styles.css';
 
 const BookingForm = ({ availableTimes, dispatch }) => {
   const { times } = availableTimes;
-  const [date, setDate] = useState('');
-
   const [bookings, setBookings] = useState({
+    date: '',
     time: '17:00',
     guests: '',
     occasion: 'Birthday',
@@ -16,13 +15,14 @@ const BookingForm = ({ availableTimes, dispatch }) => {
     e.preventDefault();
 
     console.log(`
-    Date: ${date},
+    Date: ${bookings.date},
     Time: ${bookings.time},
     Number of Guests: ${bookings.guests},
     Occasion: ${bookings.occasion}`);
 
-    setDate('');
+    // RESET VALUE TO INITIAL STATE
     setBookings({
+      date: '',
       time: '17:00',
       guests: '',
       occasion: 'Birthday',
@@ -46,9 +46,9 @@ const BookingForm = ({ availableTimes, dispatch }) => {
           type='date'
           name='date'
           id='res-date'
-          value={date}
+          value={bookings.date}
           onChange={e => {
-            setDate(e.target.value);
+            setBookings({ ...bookings, date: e.target.value });
             // new Date (e.target.value),  date argument on fetchAPI function can access .getDate() and set availableTimes different based on a given Date
             dispatch({ type: 'UPDATE_TIMES', date: new Date(e.target.value) });
           }}
