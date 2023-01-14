@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './BookingForm.styles.css';
 import { submitAPI } from '../../utils/temp';
 import { useNavigate } from 'react-router-dom';
@@ -12,7 +12,15 @@ const BookingForm = ({ availableTimes, dispatch }) => {
     guests: '',
     occasion: 'Birthday',
   });
-  const [isFormValid, setIsFormValid] = useState(true);
+  const [isFormEmpty, setIsFormEmpty] = useState(false);
+
+  useEffect(() => {
+    const { date, time, guests, occasion } = bookings;
+    localStorage.setItem('DATE', date);
+    localStorage.setItem('TIME', time);
+    localStorage.setItem('GUESTS', guests);
+    localStorage.setItem('OCCASION', occasion);
+  }, [bookings]);
 
   // SUBMIT HANDLER
   const handleSubmit = e => {
@@ -20,7 +28,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
 
     // SUBMIT LOGIC
     if ((bookings.date, bookings.time, bookings.guests !== '')) {
-      submitAPI(isFormValid);
+      submitAPI(!isFormEmpty);
       navigate('/confirmed');
 
       console.log(`
@@ -37,7 +45,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
         occasion: 'Birthday',
       });
     } else {
-      setIsFormValid(!isFormValid);
+      setIsFormEmpty(isFormEmpty);
       console.log('THERE IS AN ERROR SUBMITTING YOUR FORM');
     }
   };
