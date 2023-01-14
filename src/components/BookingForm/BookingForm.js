@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import './BookingForm.styles.css';
+import { submitAPI } from '../../utils/temp';
+import { useNavigate } from 'react-router-dom';
 
 const BookingForm = ({ availableTimes, dispatch }) => {
+  const navigate = useNavigate();
   const { times } = availableTimes;
   const [bookings, setBookings] = useState({
     date: '',
@@ -9,24 +12,34 @@ const BookingForm = ({ availableTimes, dispatch }) => {
     guests: '',
     occasion: 'Birthday',
   });
+  const [isFormValid, setIsFormValid] = useState(true);
 
   // SUBMIT HANDLER
   const handleSubmit = e => {
     e.preventDefault();
 
-    console.log(`
-    Date: ${bookings.date},
-    Time: ${bookings.time},
-    Number of Guests: ${bookings.guests},
-    Occasion: ${bookings.occasion}`);
+    // SUBMIT LOGIC
+    if ((bookings.date, bookings.time, bookings.guests !== '')) {
+      submitAPI(isFormValid);
+      navigate('/confirmed');
 
-    // RESET VALUE TO INITIAL STATE
-    setBookings({
-      date: '',
-      time: '',
-      guests: '',
-      occasion: 'Birthday',
-    });
+      console.log(`
+      Date: ${bookings.date},
+      Time: ${bookings.time},
+      Number of Guests: ${bookings.guests},
+      Occasion: ${bookings.occasion}`);
+
+      // RESET VALUE TO INITIAL STATE
+      setBookings({
+        date: '',
+        time: '',
+        guests: '',
+        occasion: 'Birthday',
+      });
+    } else {
+      setIsFormValid(!isFormValid);
+      console.log('THERE IS AN ERROR SUBMITTING YOUR FORM');
+    }
   };
 
   // HANDLING MULTIPLE INPUTS
