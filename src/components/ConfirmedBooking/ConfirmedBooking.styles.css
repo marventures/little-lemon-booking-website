@@ -1,5 +1,5 @@
 .booking-confirmation {
-  height: 100%;
+  height: 100vh;
   background-color: #edefee;
   display: flex;
   flex-direction: column;
