@@ -63,14 +63,19 @@ const BookingForm = ({ availableTimes, dispatch }) => {
         <h2 className='booking-header'>Little Lemon</h2>
         <h2 className='booking-subheader'>Chicago</h2>
         <h1 className='booking-title'>Find a Table for any occasion</h1>
-        <form className='form-container' onSubmit={handleSubmit}>
+        <form
+          className='form-container'
+          onSubmit={handleSubmit}
+          aria-label='On Submit'
+        >
           {/* DATE */}
-          <label htmlFor='res-date'>Choose date</label>
+          <label htmlFor='res-date'>Date: </label>
           <input
             type='date'
             name='date'
             id='res-date'
             value={bookings.date}
+            aria-label='On Change'
             onChange={e => {
               setBookings({ ...bookings, date: e.target.value });
               // new Date (e.target.value),  date argument on fetchAPI function can access .getDate() and set availableTimes different based on a given Date
@@ -83,12 +88,13 @@ const BookingForm = ({ availableTimes, dispatch }) => {
           />
 
           {/* TIME */}
-          <label htmlFor='res-time'>Choose time</label>
+          <label htmlFor='res-time'>Time:</label>
           <select
             id='res-time'
             name='time'
             value={bookings.time}
             onChange={handleChange}
+            aria-label='On Change'
             required={true}
           >
             {times.map(time => (
@@ -97,26 +103,28 @@ const BookingForm = ({ availableTimes, dispatch }) => {
           </select>
 
           {/* NUMBER OF GUESTS */}
-          <label htmlFor='guests'>Number of guests</label>
+          <label htmlFor='guests'>Number of Guests:</label>
           <input
             type='number'
-            placeholder='1'
+            placeholder='1-20'
             min='1'
-            max='10'
+            max='20'
             id='guests'
             name='guests'
             value={bookings.guests}
             onChange={handleChange}
+            aria-label='On Change'
             required={true}
           />
 
           {/* TYPE OF OCCASION */}
-          <label htmlFor='occasion'>Occasion</label>
+          <label htmlFor='occasion'>Occasion:</label>
           <select
             id='occasion'
             value={bookings.occasion}
             name='occasion'
             onChange={handleChange}
+            aria-label='On Change'
             required={true}
           >
             <option>Birthday</option>
