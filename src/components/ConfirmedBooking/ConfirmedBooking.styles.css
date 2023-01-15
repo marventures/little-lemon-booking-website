@@ -8,7 +8,7 @@
 }
 
 .confirmation-logo {
-  width: 50%;
+  width: 30%;
   margin: 1rem 0;
 }
 
@@ -19,7 +19,7 @@
 .confirmation-image {
   object-fit: cover;
   width: 100%;
-  height: 200px;
+  height: 100px;
 }
 
 .confirmation-confirmed {
@@ -52,7 +52,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 2rem;
+  padding: 1rem;
   border: 1px solid #333;
   background-color: #d9d9d9;
 }
@@ -82,6 +82,10 @@
   .confirmation-logo {
     width: 10%;
     margin: 1rem 0;
+  }
+
+  .confirmation-image {
+    height: 200px;
   }
 
   .confirmation-confirmed {
