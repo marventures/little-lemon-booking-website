@@ -3,6 +3,7 @@ import restaurant from '../../assets/restaurant.jpg';
 import './Footer.styles.css';
 import { links, contacts, socials } from '../../data';
 import { Link as LinkS } from 'react-scroll';
+import { FaCopyright } from 'react-icons/fa';
 
 const Footer = () => {
   // NAVLINKS
@@ -76,6 +77,20 @@ const Footer = () => {
           {socialLinks}
         </ul>
       </nav>
+
+      <p className='copyright'>
+        &copy; Copyright {new Date().getFullYear()}
+        <a
+          className='linkedin-link'
+          target='_blank'
+          href='https://www.linkedin.com/in/marvedventures/'
+          rel='noreferrer'
+        >
+          {' '}
+          Marvin M. Pacis
+        </a>
+        . Don't claim as your own.
+      </p>
     </footer>
   );
 };

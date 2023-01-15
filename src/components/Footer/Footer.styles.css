@@ -71,6 +71,26 @@ footer {
   color: #fbdabb;
 }
 
+.copyright {
+  margin-top: 3rem;
+  font-size: 14px;
+  text-align: center;
+  color: #edefee;
+}
+
+.linkedin-link:link,
+.linkedin-link:visited {
+  color: #edefee;
+  transition: all 0.2s;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.linkedin-link:hover,
+.linkedin-link:active {
+  color: #fbdabb;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
   /* FOOTER */
