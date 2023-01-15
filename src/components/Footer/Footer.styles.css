@@ -29,6 +29,7 @@ footer {
 .footer-links {
   text-transform: capitalize;
 }
+
 .footer-links:hover {
   color: #fbdabb;
 }
@@ -71,6 +72,7 @@ footer {
 .social-links {
   color: #edefee;
 }
+
 .social-links:hover {
   color: #fbdabb;
 }

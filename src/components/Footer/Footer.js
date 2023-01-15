@@ -80,14 +80,13 @@ const Footer = () => {
       </nav>
 
       <p className='copyright'>
-        &copy; Copyright {new Date().getFullYear()}
+        &copy; Copyright {new Date().getFullYear()}{' '}
         <a
           className='linkedin-link'
           target='_blank'
           href='https://www.linkedin.com/in/marvedventures/'
           rel='noreferrer'
         >
-          {' '}
           Marvin M. Pacis
         </a>
         . Don't claim as your own.
