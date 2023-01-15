@@ -1,7 +1,7 @@
 /* ABOUT */
 .about {
-  height: 100vh;
-  padding: 2rem 2rem;
+  height: 100%;
+  padding: 2rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
@@ -16,7 +16,7 @@
 
 .about-subtitle {
   font-size: 32px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: #ee9972;
 }
 
@@ -62,7 +62,8 @@
 
 @media (min-width: 768px) {
   .about {
-    padding: 4rem 4rem;
+    padding: 4rem;
+    height: 100vh;
   }
 
   .about-title {
@@ -71,25 +72,23 @@
 
   .about-subtitle {
     font-size: 48px;
-    margin-bottom: 2rem;
   }
 
   .about-text {
     font-size: 28px;
-    margin-bottom: 2rem;
   }
 
   .about-image-container {
-    width: 300px;
-    height: 320px;
+    width: 350px;
+    height: 350px;
   }
 
   .about-container-one {
-    width: 180px;
+    width: 200px;
   }
 
   .about-container-two {
-    width: 180px;
+    width: 200px;
   }
 
   .about-image-one {
@@ -110,7 +109,7 @@
 
   .about-image-container {
     width: 550px;
-    height: 600px;
+    height: 550px;
   }
 
   .about-container-one {
@@ -123,12 +122,12 @@
 
   .about-image-one {
     width: 350px;
-    height: 500px;
+    height: 450px;
   }
 
   .about-image-two {
     width: 350px;
-    height: 500px;
+    height: 450px;
   }
 }
 
