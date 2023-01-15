@@ -3,7 +3,6 @@ import restaurant from '../../assets/restaurant.jpg';
 import './Footer.styles.css';
 import { links, contacts, socials } from '../../data';
 import { Link as LinkS } from 'react-scroll';
-import { FaCopyright } from 'react-icons/fa';
 
 const Footer = () => {
   // NAVLINKS
