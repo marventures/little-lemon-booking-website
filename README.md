@@ -18,6 +18,8 @@ A table-booking system using React. It's a fully responsive web app that allows 
 ### Screenshot
 
 ![restaurantBookingSystem](https://user-images.githubusercontent.com/108392678/212535689-5cc6ef5c-b4d4-413f-9cf6-873a17562cc7.jpg)
+![restaurantBookingSystem](https://user-images.githubusercontent.com/108392678/212537315-e0cd8592-a3f3-48b9-bae7-784107307581.jpg)
+
 
 ### Links
 
