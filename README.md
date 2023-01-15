@@ -35,6 +35,7 @@ A table-booking system using React. It's a fully responsive web app that allows 
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) - For unit testing
 - CSS Flexbox and Grid
 - Semantic HTML
+- Open Graph Protocol
 
 ### What I learned
 
@@ -52,6 +53,7 @@ A table-booking system using React. It's a fully responsive web app that allows 
 - Using keys within list Components
 - Lifting state up
 - Styling React App with Pure CSS
+- Adding Open Graph Protocol meta tags to improve SEO
 
 Here is a code snippet: 
 
