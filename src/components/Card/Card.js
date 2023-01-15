@@ -2,7 +2,6 @@ import './Card.styles.css';
 import { specials } from '../../data';
 import { RiEBike2Line } from 'react-icons/ri';
 
-// TODO: CARD COMPONENT
 const Card = () => {
   const specialties = specials.map(
     ({ id, image, name, price, description }) => {
