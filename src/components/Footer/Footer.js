@@ -47,7 +47,9 @@ const Footer = () => {
   return (
     <footer name='contact'>
       <nav className='footer-container'>
-        <img src={restaurant} className='footer-photo' alt='logo' />
+        <div className='footer-photo-container'>
+          <img src={restaurant} className='footer-photo' alt='logo' />
+        </div>
         <ul className='grid-item-nav'>
           <p className='footer-title'>Little Lemon</p>
           {navLinks}

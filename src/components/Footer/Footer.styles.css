@@ -12,10 +12,14 @@ footer {
   grid-template-columns: repeat(12, 1fr);
 }
 
-.footer-photo {
-  width: 150px;
-  height: 300px;
+.footer-photo-container {
   grid-column: 3 / span 2;
+}
+
+.footer-photo {
+  object-fit: cover;
+  height: 300px;
+  width: 175px;
 }
 
 .footer-title {
