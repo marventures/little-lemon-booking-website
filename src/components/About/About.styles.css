@@ -1,6 +1,6 @@
 /* ABOUT */
 .about {
-  height: 100vh;
+  height: 100%;
   padding: 8rem 2rem;
   display: grid;
   grid-template-columns: 1fr;

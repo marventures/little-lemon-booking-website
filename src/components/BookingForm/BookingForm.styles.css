@@ -1,7 +1,7 @@
 .booking-form {
-  height: 100vh;
+  height: 100%;
   background-color: #495e57;
-  padding: 2rem;
+  padding: 10rem 2rem;
   font-family: 'Karla', sans-serif;
   color: #edefee;
 }
