@@ -10,7 +10,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
   const { times } = availableTimes;
   const [bookings, setBookings] = useState({
     date: '',
-    time: '',
+    time: '17:00',
     guests: '',
     occasion: 'Birthday',
   });
@@ -37,7 +37,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
       // RESET VALUE TO INITIAL STATE
       setBookings({
         date: '',
-        time: '',
+        time: '17:00',
         guests: '',
         occasion: 'Birthday',
       });
