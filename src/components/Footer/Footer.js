@@ -84,7 +84,7 @@ const Footer = () => {
         <a
           className='linkedin-link'
           target='_blank'
-          href='https://www.linkedin.com/in/marvedventures/'
+          href='https://www.linkedin.com/in/marventures/'
           rel='noreferrer'
         >
           Marvin M. Pacis
